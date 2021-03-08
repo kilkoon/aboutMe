@@ -5,8 +5,8 @@ _site
 .sass-cache
 .jekyll-metadata
 
-# Gem lock file
+# Gem lock
 Gemfile.lock
 
-# Mac OSX
-.DS_store
+# Mac
+.DS_Store

@@ -1,6 +1,13 @@
+/*
+ * mobile.scss
+ * Author: Chen Su <i@ghosind.com>
+ */
+
 @charset "utf-8";
 
-@media screen and (max-width: 768px) {
+@import 'common';
+
+@media screen and (max-width: $media-break-large) {
   /* reset default styles */
   img {
     width: 100%;
@@ -13,6 +20,10 @@
   }
 
   /* Footer */
+  .container-footer {
+    padding: 10px 0 0 5px;
+  }
+
   .footer-copyright .float-left,
   .footer-copyright .float-right {
     float: none;

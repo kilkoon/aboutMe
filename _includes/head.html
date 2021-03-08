@@ -2,12 +2,12 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 {% seo %}
-{% if site.keywords or page.tags %}
+<meta property="og:image" content="{{ site.url }}/assets/images/logo.jpg" />
 <meta
-  name="keywords"
-  content="{% if page.tags %}{{ page.tags | join: ',' }}{% else %}{{
-    site.keywords | join: ','
-  }}{% endif %}" />
+  property="twitter:image"
+  content="{{ site.url }}/assets/images/logo.jpg" />
+{% if site.keywords or page.tags %}{% assign keywords = page.tags | concat: site.keywords %}
+<meta name="keywords" content="{{ keywords | join: ',' }}" />
 {% endif %}
 <link rel="shortcut icon" href="/favicon.ico" />
 <link rel="apple-touch-icon" href="/favicon.ico" />
@@ -24,24 +24,19 @@
   rel="stylesheet"
   type="text/css"
   href="{{ site.baseurl }}/assets/css/highlight.css" />
-
 <!--[if lt IE 9]>
-  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <script
+    async
+    src="http://html5shiv.googlecode.com/svn/trunk/html5.js"
+  ></script>
 <![endif]-->
-{% if site.analytics %}
-  {% include analytics.html %}
-{% endif %}
-{% if site.mathjax %}
 <script
-  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"
-  async>
+  async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=/assets/script/mathjax_config.js">
 </script>
-{% endif %}
-{% if site.diagram %}
-<script src="/assets/scripts/jekyllpaper.js" async></script>
 <script
-  src="https://unpkg.com/mermaid@8.5.1/dist/mermaid.min.js"
-  onload="javascript:loadMermaid();"
-  async>
+  async
+  type="text/javascript"
+  src="/assets/script/mermaid.min.js">
 </script>
-{% endif %}
+{% include google_analytics.html %}

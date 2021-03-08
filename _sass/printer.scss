@@ -1,3 +1,8 @@
+/*
+ * printer.scss
+ * Author: Chen Su <i@ghosind.com>
+ */
+
 @charset "utf-8";
 
 .print-post-author {
@@ -16,11 +21,7 @@
   }
 
   /* Post */
-  .post-title {
-    text-align: center;
-  }
-
-  .post-author {
+  .print-post-author {
     display: block;
     text-align: center;
   }
