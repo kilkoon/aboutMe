@@ -57,4 +57,4 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
-remote_theme: kilkoon/aboutMe
+remote_theme: ghosind/Jekyll-Paper-Github
